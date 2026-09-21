@@ -29,7 +29,24 @@
             <option value = "Michigan" selected>Michigan</option>
             <option value = "Alaska">Alaska</option>
             <option value = "Maryland">Maryland</option>
+        </select>
         <input type = "text" id = "zip" name = "zip" class = "form-control">
-
+        <br>
+        <label for = "phone">Phone</label>
+        <label for = "email">Email</label>
+        <br>
+        <input type = "text" id = "phone" name = "phone" maxlength = "10" class = "form-control">
+        <input type = "text" id = "email" name = "email" class = "form-control" placeholder="example@example.com">
+        <br>
+        <label for = "preferred contact">Preferred Method of Contact</label>
+        <br>
+        <input type = "radio" id = "email radio" name = "preferred contact" value = "email radio">
+        <label for = "email radio">Email</label>
+        <input type = "radio" id = "phone radio" name = "preferred contact" value = "phone radio">
+        <label for = "phone radio">Phone</label>
+        <br>
+        <br>
+        <input type = "submit" value = "Sign in" class = "form-control">
+    </form>
 </body>
 </html>
