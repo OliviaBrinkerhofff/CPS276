@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
     <title>Form Project</title>
     <meta charset = "UTF-8">
@@ -40,20 +40,22 @@
         </div>
         <div class = "col-md-6">
             <label for = "phone" class = "form-label">Phone</label>
-             <input type = "text" id = "phone" name = "phone" maxlength = "10" class = "form-control">
+            <input type = "text" id = "phone" name = "phone" maxlength = "10" class = "form-control">
         </div>
         <div class = "col-md-6">
             <label for = "email" class = "form-label">Email</label>
             <input type = "text" id = "email" name = "email" class = "form-control" placeholder="name@example.com">
         </div>
-            <label for = "preferred contact">Preferred method of contact</label>
-        <div class= "form-check form-check-inline">
-            <input class = "form-check-input" type = "radio" id = "email radio" name = "preferred contact" value = "email radio">
-            <label class = "form-check-label" for = "email radio">Email</label>
-        </div>
-        <div class= "form-check form-check-inline">
-            <input class = "form-check-input" type = "radio" id = "phone radio" name = "preferred contact" value = "phone radio">
-            <label class = "form-check-label" for = "phone radio">Text</label>
+        <label for = "preferred contact">Preferred method of contact</label>
+        <div>
+            <div class = "form-check form-check-inline">
+                <input class = "form-check-input" type = "radio" id = "email radio" name = "preferred contact" value = "email radio">
+                <label class = "form-check-label" for = "email radio">Email</label>
+            </div>
+            <div class = "form-check form-check-inline">
+                <input class = "form-check-input" type = "radio" id = "phone radio" name = "preferred contact" value = "phone radio">
+                <label class = "form-check-label" for = "phone radio">Text</label>
+            </div>
         </div>
         <div class = "col-12">
             <button type = "submit" value = "Sign in" class = "btn btn-primary">Sign in</button>
