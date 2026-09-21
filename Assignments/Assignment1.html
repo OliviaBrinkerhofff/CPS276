@@ -7,46 +7,55 @@
     <meta name = "viewport" content = "width = device-width, inital scale = 1.0">
 </head>
 <body class = "container">
-    <form action = "#" method = "post">
-        <label for = "first name">First Name</label> 
-        <label for = "last name">Last Name</label>
-        <br>
-        <input type = "text" id = "first name" name = "first name" class = "form-control" placeholder = "Enter first name">
-        <input type = "text" id = "last name" name = "last name" class = "form-control" placeholder = "Enter last name">
-        <br>
+    <form action = "#" method = "post" class = "row g-3">
+        <div class = "col-md-6">
+            <label for = "first name" class = "form-label">First Name</label> 
+            <input type = "text" id = "first name" name = "first name" class = "form-control" placeholder = "Enter first name">
+        </div>
+        <div class = "col-md-6">
+            <label for = "last name" class = "form-label">Last Name</label>
+            <input type = "text" id = "last name" name = "last name" class = "form-control" placeholder = "Enter last name">
+        </div>
+        <div class = "col-12">
         <label for = "address">Address</label>
-        <br>
         <input type = "text" id = "address" name = "address" class = "form-control" placeholder = "Enter your address">
-        <br>
-        <label for = "city">City</label>
-        <label for = "state">State</label>
-        <label for = "zip">Zip</label>
-        <br>
-        <input type = "text" id = "city" name = "city" class = "form-control">
-        <select id = "state" name = "state" class = "form-control">
-            <option value = "Colorado">Colorado</option>
-            <option value = "New York">New York</option>
-            <option value = "Michigan" selected>Michigan</option>
-            <option value = "Alaska">Alaska</option>
-            <option value = "Maryland">Maryland</option>
-        </select>
-        <input type = "text" id = "zip" name = "zip" class = "form-control">
-        <br>
-        <label for = "phone">Phone</label>
-        <label for = "email">Email</label>
-        <br>
-        <input type = "text" id = "phone" name = "phone" maxlength = "10" class = "form-control">
-        <input type = "text" id = "email" name = "email" class = "form-control" placeholder="example@example.com">
-        <br>
+        </div>
+        <div class = "col-md-6">
+            <label for = "city" class = "form-label">City</label>
+            <input type = "text" id = "city" name = "city" class = "form-control">
+        </div>
+        <div class = "col-md-4">
+            <label for = "state" class = "form-label">State</label>
+            <select id = "state" name = "state" class = "form-select">
+                <option value = "Colorado">Colorado</option>
+                <option value = "New York">New York</option>
+                <option value = "Michigan" selected>Michigan</option>
+                <option value = "Alaska">Alaska</option>
+                <option value = "Maryland">Maryland</option>
+            </select>
+        </div>
+        <div class = "col-md-2">
+            <label for = "zip" class = "form-label">Zip</label>
+            <input type = "text" id = "zip" name = "zip" class = "form-control">
+        </div>
+        <div class = "col-md-6">
+            <label for = "phone" class = "form-label">Phone</label>
+             <input type = "text" id = "phone" name = "phone" maxlength = "10" class = "form-control">
+        </div>
+        <div class = "col-md-6">
+            <label for = "email" class = "form-label">Email</label>
+            <input type = "text" id = "email" name = "email" class = "form-control" placeholder="name@example.com">
+        </div>
         <label for = "preferred contact">Preferred Method of Contact</label>
-        <br>
         <input type = "radio" id = "email radio" name = "preferred contact" value = "email radio">
         <label for = "email radio">Email</label>
         <input type = "radio" id = "phone radio" name = "preferred contact" value = "phone radio">
         <label for = "phone radio">Phone</label>
         <br>
         <br>
-        <input type = "submit" value = "Sign in" class = "form-control">
+        <div class = "col-12">
+            <button type = "submit" value = "Sign in" class = "btn btn-primary">Sign in</button>
+        </div>
     </form>
 </body>
 </html>
