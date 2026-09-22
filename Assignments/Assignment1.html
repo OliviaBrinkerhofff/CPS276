@@ -63,3 +63,22 @@
     </form>
 </body>
 </html>
+
+
+
+<!--
+    1: Why must every label for match an input (or select) id? What happens if they do not match?
+        So the information can be stored and then read properly. If the label doesn't match the id, the infromation will be stored
+        wrong and will not be useful
+    2: Why do the preferred-contact radio buttons share the same name? What would happen if they had different names?
+        They share the same name so that only one option can be chosen between the options listed. If there were different names, 
+        a user could choose both options
+    3: What does a browser required attribute do, and why will PHP still need to validate later?
+        The required attribute makes it so that input has to be filled out or answered in order to submit the form.
+        The PHP code will need to make sure those fields are filled out
+    4: Why group related controls (name fields together, address fields together) instead of one long list of inputs?
+        So things are more legible for someone reading the code and so things are easy to understand for the user
+    5: When would you use GET vs POST for a form? Why is POST a better default for this contact form once PHP is added?
+        POST is for more sensitive information as well as large amounts of it where as GET is for more general information. 
+        POST is better for this form because this isn't a small amount of data being requested
+-->
