@@ -2,9 +2,20 @@
 
 $numbers = [1];
 
+$output = "";
+
 for($i = 2; $i <= 50; $i++){
     array_push($numbers, $i);
 }
+
+for($i = 1; $i < count($numbers); $i+=2){
+//foreach($numbers as $number){
+    
+    $output .= "$numbers[$i] - ";
+
+}
+
+
 
 //print_r($numbers);
 
@@ -20,7 +31,7 @@ for($i = 2; $i <= 50; $i++){
 </head>
     <body class = "container">
         <main>
-            Even numbers:
+            Even numbers: <?php echo $output?>
 
 </html>
 
