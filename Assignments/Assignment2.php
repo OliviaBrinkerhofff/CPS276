@@ -10,12 +10,10 @@ for($i = 2; $i <= 50; $i++){
 
 for($i = 1; $i < count($numbers); $i+=2){
 //foreach($numbers as $number){
-    
     $output .= "$numbers[$i] - ";
-
 }
 
-
+$output2 = substr($output, 0, -2);
 
 //print_r($numbers);
 
@@ -31,7 +29,7 @@ for($i = 1; $i < count($numbers); $i+=2){
 </head>
     <body class = "container">
         <main>
-            Even numbers: <?php echo $output?>
+            Even numbers: <?php echo $output2?>
 
 </html>
 
