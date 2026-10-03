@@ -9,8 +9,8 @@ function addName($name){
         //names swapped still as an array
         $name2 = implode(", ", $lastFirst);
         //name back to string
-        if(count($listofNames) === 0){
-            array_push($listofNames, $name2);
+        if(empty($listOfNames)){
+            $listOfNames[0] = $name2;
         }
         else{
         $names = implode("/", $listOfNames);
@@ -23,7 +23,8 @@ function addName($name){
 
 function clearNames(){
 
-
+    $listOfNames = [];
+    return $listOfNames;
 
 }
 

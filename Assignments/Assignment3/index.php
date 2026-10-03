@@ -1,10 +1,6 @@
 <?php
- require_once "processNames.php";
- $listofNames = [];
- if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $name = $_POST["name"];
-    echo addName($name);
-    }
+ require "processNames.php";
+ 
 ?>
 
 
@@ -42,7 +38,17 @@
                 <div class = "form-group">
                     <label for = "nameList">List of Names</label>
                     <textarea style = "height: 500px;" class = "form-control" id = "nameList" name = "nameList">
-
+                    <?php
+                    if($_SERVER["REQUEST_METHOD"] == "POST"){
+                        if (isset($_POST["addName"])) {
+                            $name = $_POST["addName"];
+                            addName($name);
+                        } 
+                        elseif (isset($_POST["clearNames"])) {
+                            clearNames();
+                        }
+                    }
+                    ?>
                     </textarea>
                 </div>
             <form>
