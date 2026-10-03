@@ -1,7 +1,27 @@
 <?php
  require_once "processNames.php";
-
+ $listofNames = [];
+ if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $name = $_POST["name"];
+    echo addName($name);
+    }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!doctype html>
 <html lang = "en">
     <head>
@@ -12,7 +32,7 @@
     <body>
         <div class = "container">
             <h1>Add Names</h1>
-            <form method = "post" action = "">
+            <form method = "post" action = "index.php">
                 <input type = "submit" name = "addName" class = "btn btn-primary" value = "Add Name">
                 <input type = "submit" name = "clearNames" class = "btn btn-primary" value = "Clear Names">
                 <div class = "form-group">
