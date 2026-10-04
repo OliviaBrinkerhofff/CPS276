@@ -7,16 +7,16 @@ function addName($name){
         //one item array
         $lastFirst = array_flip($list2);
         //names swapped still as an array
-        $name2 = implode(", ", $lastFirst);
+        //$name2 = implode(", ", $lastFirst);
         //name back to string
         if(empty($listOfNames)){
-            $listOfNames[0] = $name2;
+            $listOfNames[0] = $lastFirst;
         }
         else{
-        $names = implode("/", $listOfNames);
-        $namesList = $names . "/" . $name2;
-        $listOfNames = explode("/", $namesList);
-        sort($listOfNames);
+        $names = implode("/", $listOfNames); //into a string
+        $namesList = $names . "/" . $name2; //add the new name
+        $listOfNames = explode("/", $namesList); // back to an array
+        sort($listOfNames); //sort
         }
         return $listOfNames;
 }

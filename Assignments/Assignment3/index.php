@@ -1,23 +1,17 @@
 <?php
  require "processNames.php";
-
+$listOfNames = [];
+ if($_SERVER["REQUEST_METHOD"] == "POST"){
+    if (isset($_POST["addName"])) {
+        $name = $_POST["name"];
+        $listOfNames = addName($name);
+    } 
+    elseif (isset($_POST["clearNames"])) {
+        $listOfNames = clearNames();
+    }
+}
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!doctype html>
 <html lang = "en">
@@ -40,15 +34,7 @@
                     <label for = "nameList">List of Names</label>
                     <textarea style = "height: 500px;" class = "form-control" id = "nameList" name = "nameList">
                         <?php
-                            if($_SERVER["REQUEST_METHOD"] == "POST"){
-                                if (isset($_POST["addName"])) {
-                                    $name = $_POST["name"];
-                                    $_POST["nameList"] = addName($name);
-                                } 
-                                elseif (isset($_POST["clearNames"])) {
-                                    $_POST["nameList"] = clearNames();
-                                }
-                            }
+                        echo $listOfNames;
                         ?>
                     </textarea>
                 </div>
