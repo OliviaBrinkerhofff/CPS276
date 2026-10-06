@@ -1,5 +1,5 @@
 <?php
- require "processNames.php";
+ require_once "processNames.php";
 $listOfNames = [];
  if($_SERVER["REQUEST_METHOD"] == "POST"){
     if (isset($_POST["addName"])) {
@@ -34,7 +34,9 @@ $listOfNames = [];
                     <label for = "nameList">List of Names</label>
                     <textarea style = "height: 500px;" class = "form-control" id = "nameList" name = "nameList">
                         <?php
-                        echo $listOfNames;
+                         foreach($listOfNames as $value){
+                            echo $value . "\n";
+                        }
                         ?>
                     </textarea>
                 </div>
